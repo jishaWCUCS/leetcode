@@ -12,7 +12,9 @@ public class WordFrequency {
         for(String s : word){
             hmap.put(s, hmap.getOrDefault(s,0) +1);
         }
-        System.out.println(hmap);
+        for(Map.Entry<String,Integer> count : hmap.entrySet()){
+            System.out.println("Key is : "+count.getKey()+", Value is "+count.getValue());
+        }
 
     }
 }

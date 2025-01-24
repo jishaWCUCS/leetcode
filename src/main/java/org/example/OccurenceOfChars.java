@@ -3,9 +3,8 @@ package org.example;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
-public class Test {
+public class OccurenceOfChars {
 
     public static  void main(String[] args){
         String s = "Hello There";

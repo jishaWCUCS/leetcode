@@ -19,9 +19,7 @@ public class OccurenceOfDupChar {
                 System.out.println("Key: "+dupcount.getKey()+", Value: "+dupcount.getValue());
             }
         }
-
-        //Using Stream API
-        Map<Character, Long> count1 = str.chars().
+       /* Map<Character, Long> count1 = str.chars().
                 mapToObj(c -> (char) c).
                 filter(Character::isLetter).
                 collect(Collectors.groupingBy(c -> c, Collectors.counting()));
@@ -29,7 +27,7 @@ public class OccurenceOfDupChar {
         count1.entrySet().stream().
                 filter(c ->c.getValue() >1).
                 forEach(dupCharMap -> System.out.println
-                        ("key: "+dupCharMap.getKey()+", Value: "+dupCharMap.getValue()));
+                        ("key: "+dupCharMap.getKey()+", Value: "+dupCharMap.getValue()));*/
     }
 
 
