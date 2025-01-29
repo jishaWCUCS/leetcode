@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -13,7 +14,7 @@ public class MovePosNegInt {
         System.out.println(movePosNeg(list));
     }
         public static List movePosNeg(List<Integer> list){
-           List<Integer> newList = new ArrayList<>();
+           /*List<Integer> newList = new ArrayList<>();
             int[] arr = new int[list.size()];
             int left = 0;
             int right = list.size() - 1;
@@ -27,6 +28,17 @@ public class MovePosNegInt {
                 }
             }
             newList = IntStream.of(arr).boxed().collect(Collectors.toList());
+            return newList;*/
+            List<Integer> newList = new ArrayList<>(Collections.nCopies(list.size(),0));
+            int left = 0;
+            int right = list.size() - 1;
+            for(Integer num : list){
+                if(num>0){
+                    newList.set(right--, num);
+                }else{
+                    newList.set(left++, num);
+                }
+            }
             return newList;
         }
 }
