@@ -19,7 +19,7 @@ public class Practice2 {
         boolean isPrime = IntStream.rangeClosed(2, (int) Math.sqrt(num)).noneMatch(x -> num % x == 0);
         System.out.println(isPrime);
 
-        //Write a program to print duplicate numbers.
+        //Write a program to print duplicate numbers.lo
         int a[] = {1, 4, 5, 2, 12, 34, 2, 11, 6, 5};
         Map<Integer, Long> hmap = Arrays.stream(a).boxed().
                 collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
@@ -94,39 +94,6 @@ public class Practice2 {
                 collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         Long list4 = hmap2.keySet().stream().filter(o -> hmap2.get(o)>1).collect(Collectors.counting());
         System.out.println(list4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }

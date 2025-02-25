@@ -81,11 +81,6 @@ public class Practice {
         Map<Double, List<Employee>> empMap = empList.stream().collect(Collectors.groupingBy(Employee::getRating));
         System.out.println(empMap);
 
-
-
-
-
-
 //check if a vowel is present in a string.
         String str ="sws";
         Set<Character> set = Set.of('a','e','i','o','u');
@@ -95,18 +90,6 @@ public class Practice {
             }
             System.out.println("false");
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 }
