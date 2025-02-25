@@ -18,7 +18,7 @@ public class WordFrequency {
         for(Map.Entry<String,Integer> count : hmap.entrySet()){
             System.out.println("Key is : "+count.getKey()+", Value is "+count.getValue());
         }*/
-        List<String> list = Arrays.asList("str","str","s","a","q");
+        List<String> list = Arrays.asList(str.split(" "));
         Map<String, Long>  hmap = list.stream().
                 collect(Collectors.groupingBy(c->c, Collectors.counting()));
         System.out.println(hmap);

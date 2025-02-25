@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class OccurenceOfDupChar {
 
     public static void main(String[] args){
-        String str = "Hi There Hai".toLowerCase();
+        String str = "Hi There Hai hi".toLowerCase();
         Map<Character, Integer> count = new HashMap<>();
         for(char ch : str.toCharArray()){
             if(Character.isLetter(ch)){

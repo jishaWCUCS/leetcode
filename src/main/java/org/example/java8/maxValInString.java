@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class maxValInString {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3, 7, 6, 7);
-        List<String> strlist = Arrays.asList("a","b","c");
+        List<String> strlist = Arrays.asList("abc","cde","efg","ghi");
         System.out.println(list.stream().max(Integer::compare).orElse(0));
         convertToUpCase(strlist);
     }

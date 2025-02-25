@@ -1,8 +1,11 @@
 package org.example;
 
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class OccurenceOfChars {
 
@@ -15,5 +18,10 @@ public class OccurenceOfChars {
             }
         }
         System.out.println(hmap);
-        }
+
+        Map<Character, Long> map = s.chars().
+                mapToObj(c->(char)c).filter(Character::isLetter).
+                collect(Collectors.groupingBy(c->c,Collectors.counting()));
+        System.out.println(map);
+    }
 }

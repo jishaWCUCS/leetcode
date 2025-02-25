@@ -18,7 +18,8 @@ public class DuplicateString {
         Set<Character> hset = new HashSet<>();
         Set<Character> linkedHashSet =  str.chars().
                 mapToObj(c -> (char) c).
-                filter(Character::isLetter).filter(c->!hset.add(c)).
+                filter(Character::isLetter).
+                filter(c->!hset.add(c)).
                 collect(Collectors.toCollection(LinkedHashSet :: new));
         System.out.println(linkedHashSet);
 

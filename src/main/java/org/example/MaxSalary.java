@@ -8,6 +8,15 @@ public class MaxSalary {
         List<Integer> salary = Arrays.asList(100, 200, 400, 300,900);
         Optional<Integer> maxSal = salary.stream().distinct()
                 .sorted(Comparator.reverseOrder()).limit(1).findFirst();
-        System.out.println(maxSal);
+        Optional<Integer> maxSal1= salary.stream().distinct()
+                .max(Integer::compare).stream().findFirst();
+        maxSal.ifPresent(System.out::println);
+        maxSal1.ifPresent(System.out::println);
+      /*  Integer max = salary.stream().
+                reduce((sal1,sal2)->sal1>sal2?sal1 : sal2).get();
+        System.out.println(max);*/
     }
 }
+
+
+

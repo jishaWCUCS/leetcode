@@ -1,5 +1,7 @@
 package org.example.java8;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -14,8 +16,7 @@ public class VowelCount {
                count++;
         }
         System.out.println(count);
-
-        System.out.println(s.chars().filter(c->VOWELS.contains((char)c)).
+        System.out.println(s.chars().mapToObj(c->(char)c).filter(c->VOWELS.contains(c)).
                 count());
     }
 }

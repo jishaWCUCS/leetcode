@@ -39,6 +39,6 @@ public class MovePosNegInt {
                     newList.set(left++, num);
                 }
             }
-            return newList;
+            return newList;//[-1,-2,-4,-3,9,8,7,6]
         }
 }

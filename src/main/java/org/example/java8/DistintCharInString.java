@@ -8,11 +8,10 @@ import java.util.stream.IntStream;
 
 public class DistintCharInString {
 
-    public static void main(String[] args){
-        String s ="leetcode";
-       String str = s.chars().distinct().mapToObj(c->String.valueOf((char)c)).
+    public static void main(String[] args) {
+        String s = "swiss";
+        String str = s.chars().distinct().mapToObj(c->String.valueOf((char)c)).
                collect(Collectors.joining());
         System.out.println(str);
     }
-
 }
