@@ -16,6 +16,8 @@ public class ComparatorExample {
 
         //Using Java8
         list.sort(Comparator.comparing(s -> s.getAge()));
+        System.out.println("\nSorted by name:");
+        list.stream().sorted(Comparator.comparing(Employee::getName));
         list.forEach(System.out::println);
     }
 }

@@ -3,6 +3,7 @@ package org.example.java8;
 import org.example.StringReverse;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Practice {
@@ -53,8 +54,8 @@ public class Practice {
         //Count the frequency of characters in a string using Streams.
         String str2 = "Apple";
         Map<Character, Long> hmap = str2.chars().
-                mapToObj(c -> (char)c).collect(Collectors.groupingBy(c ->c, Collectors.counting()));
-        System.out.println(hmap);
+                mapToObj(c -> (char)c).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println("hmap : "+hmap);
 
         //Generate an infinite Stream of even numbers and limit it to 10 elements.
         List<Integer> list2 = Arrays.asList(
