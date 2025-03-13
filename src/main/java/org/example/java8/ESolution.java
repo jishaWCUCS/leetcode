@@ -3,7 +3,7 @@ package org.example.java8;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class EmpSolution {
+public class ESolution {
 
     public static void main(String[] args) {
 
